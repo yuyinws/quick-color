@@ -1,10 +1,10 @@
 {
   "name": "quick-color",
   "displayName": "quick color",
-  "description": "give you a quick color picker",
+  "description": "give you color suggestions",
   "publisher": "yuyinws",
   "icon": "assets/icon.png",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "license": "MIT",
   "repository": {
     "url": "https://github.com/yuyinws/quick-color"
