@@ -14,8 +14,7 @@ In the `setting.josn` file, set and modify the color's hex.
 ``` json
   "quickColor.customColor": {
     "gray-200": "#E2E8F0",
-    "blue-100": "##E0F2FE",
-    ....
+    "blue-100": "#E0F2FE",
   }
 ```
 
