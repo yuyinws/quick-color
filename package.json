@@ -1,8 +1,14 @@
 {
   "name": "quick-color",
   "displayName": "quick-color",
-  "description": "",
-  "version": "0.0.1",
+  "description": "give you a quick color picker",
+  "publisher": "yuyinws",
+  "icon": "assets/icon.png",
+  "version": "1.0.0",
+  "license": "MIT",
+  "repository": {
+    "url": "https://github.com/yuyinws/quick-color"
+  },
   "engines": {
     "vscode": "^1.46.0"
   },
@@ -11,6 +17,9 @@
   ],
   "activationEvents": [
     "onCommand:quick-color.quickColor"
+  ],
+  "keywords": [
+    "color"
   ],
   "main": "./dist/extension.js",
   "contributes": {

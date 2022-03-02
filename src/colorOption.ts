@@ -66,7 +66,7 @@ let blues = [
   '#2563EB',
   '#1D4ED8',
   '#1E40AF',
-  '#1E40AF',
+  '#1E3A8A',
 ]
 
 let purples = [
