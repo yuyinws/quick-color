@@ -4,7 +4,7 @@
   "description": "give you a quick color picker",
   "publisher": "yuyinws",
   "icon": "assets/icon.png",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "license": "MIT",
   "repository": {
     "url": "https://github.com/yuyinws/quick-color"
@@ -28,7 +28,18 @@
         "command": "quick-color.quickColor",
         "title": "quick color"
       }
-    ]
+    ],
+    "configuration": {
+      "type": "object",
+      "title": "quick-color configuration",
+      "properties": {
+        "quickColor.customColor": {
+          "type": "object",
+          "default": {},
+          "description": "custom color options"
+        }
+      }
+    }
   },
   "scripts": {
     "vscode:prepublish": "yarn run package",

@@ -7,10 +7,24 @@ const pickOptions: vscode.QuickPickOptions = {
   placeHolder: 'Type color name',
 }
 
+const loadCustomColor = () => {
+  let config: vscode.WorkspaceConfiguration | undefined = vscode.workspace
+    .getConfiguration()
+    .get('quickColor.customColor')
+  for (let i in config) {
+    let optionIndex = colorOptions.findIndex((item) => item.label === i)
+    if (optionIndex > -1) {
+      colorOptions[optionIndex].hex = config[i]
+      colorOptions[optionIndex].description = config[i]
+    }
+  }
+}
+
 export function activate(context: vscode.ExtensionContext) {
   let disposable = vscode.commands.registerCommand(
     'quick-color.quickColor',
     () => {
+      loadCustomColor()
       vscode.window
         .showQuickPick(colorOptions, pickOptions)
         .then((selection) => {
@@ -26,7 +40,7 @@ export function activate(context: vscode.ExtensionContext) {
               editor.edit((editBuilder) => {
                 editBuilder.insert(
                   editor.selection.start,
-                  selection ? selection.hex : '',
+                  selection ? selection.hex : ''
                 )
               })
             })
